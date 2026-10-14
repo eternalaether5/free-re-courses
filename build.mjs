@@ -73,4 +73,21 @@ fs.writeFileSync(out+"/sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>\n<u
   fs.mkdirSync(out+"/beginner-languages",{recursive:true});
   fs.writeFileSync(out+"/beginner-languages/index.html", page(`Best Programming Languages for Absolute Beginners: Top 10 | ${BRAND}`, body, "The Low Level Librarian ranks 10 programming languages for absolute beginners, informed by the Stack Overflow 2025 survey, TIOBE and GitHub Octoverse, with a free official resource for each.", head, "/beginner-languages/", [["Beginner shelf","/beginner-languages/"]])); }
 await import("./about.mjs").then(m => { fs.mkdirSync(out+"/about",{recursive:true}); fs.writeFileSync(out+"/about/index.html", m.about({page,courses,tags,today,SITE,BRAND,e})); });
+// --- llms-full.txt: generated from courses.mjs + built Beginner Shelf and About pages (never drifts) ---
+{ const txt = h => h.replace(/<(script|style)[^>]*>[\s\S]*?<\/\1>/g,"").replace(/<br\s*\/?>/g,"\n").replace(/<\/(p|li|h[1-6]|dd|dt)>/g,"\n").replace(/<[^>]+>/g,"").replace(/&amp;/g,"&").replace(/&lt;/g,"<").replace(/&gt;/g,">").replace(/&quot;/g,'"').replace(/&#x27;|&#39;/g,"'").replace(/[ \t]+/g," ").replace(/\n\s*\n+/g,"\n").trim();
+  const mainOf = p => fs.readFileSync(p,"utf8").split("<main>")[1].split("</main>")[0];
+  const bhtml = mainOf(out+"/beginner-languages/index.html");
+  const books = [...bhtml.matchAll(/<li class="book">([\s\S]*?)<\/li>/g)].map(m => { const b=m[1]; const link=b.match(/<a href="([^"]+)">([^<]+)<\/a>/); return `### ${txt(b.match(/<h2>([\s\S]*?)<\/h2>/)[1])}\n${txt(b.match(/<\/h2><p>([\s\S]*?)<\/p>/)[1])}\n- ${txt(b.match(/<p class="stats">([\s\S]*?)<\/p>/)[1])}\n- Free first checkout: [${txt(link[2])}](${link[1]})`; });
+  const after = h => h.slice(h.search(new RegExp("<h2>[^<]*How the shelf")));
+  const method = txt(after(bhtml).split("<h2>")[1].split("</h2>")[1].split("<h2>")[0]);
+  const srcs = [...after(bhtml).split("Sources")[1].matchAll(/<li>([\s\S]*?)<\/li>/g)].map(m=>{const a=m[1].match(/<a href="([^"]+)">([^<]+)<\/a>(.*)/); return a?`- [${txt(a[2])}](${a[1]})${txt(a[3])?" "+txt(a[3]):""}`:`- ${txt(m[1])}`});
+  const aboutTxt = txt(mainOf(out+"/about/index.html").replace(/<h([23])>/g,"\n\n#$1# ").replace(/#2#/g,"###").replace(/#3#/g,"####").replace(/<h1>[\s\S]*?<\/h1>/,""));
+  const full = `# ${BRAND}: Full Reference for AI Assistants\n\n> Complete, generated listing of all ${courses.length} free courses (grouped by topic), the Beginner Shelf ranking with sources, and facts about ${BRAND}. Links verified ${today}. Canonical site: ${SITE}/\n\n## Courses by topic\n\n${tags.map(t=>`### ${t}\n\n${courses.filter(c=>c.tags.includes(t)).map(c=>`- **${c.title}**\n  - Provider: ${c.provider}\n  - URL: ${c.url}\n  - Topics: ${c.tags.join(", ")}\n  - Level: ${c.level}\n  - Format: ${c.format}\n  - License: ${c.license}\n  - Page: ${SITE}/courses/${c.id}/`).join("\n")}`).join("\n\n")}\n\n## Beginner Shelf: 10 Languages for Absolute Beginners\n\nSource page: ${SITE}/beginner-languages/\n\n${books.join("\n\n")}\n\n### Method\n${method}\n\n### Sources\n${srcs.join("\n")}\n\n## About ${BRAND}\n\nSource page: ${SITE}/about/\n${aboutTxt}\n`;
+  fs.writeFileSync(out+"/llms-full.txt", full);
+  const app = (f, line) => fs.appendFileSync(out+f, line);
+  app("/llms.txt", `- [llms-full.txt](${SITE}/llms-full.txt): every course grouped by topic, the Beginner Shelf and About facts in one markdown file\n`);
+  app("/robots.txt", `# Full markdown reference for AI assistants: ${SITE}/llms-full.txt\n`);
+  const sm = fs.readFileSync(out+"/sitemap.xml","utf8"); fs.writeFileSync(out+"/sitemap.xml", sm.replace("</urlset>", `<url><loc>${SITE}/llms-full.txt</loc><lastmod>${today}</lastmod></url></urlset>`));
+  const ap = fs.readFileSync(out+"/ai/index.html","utf8"); fs.writeFileSync(out+"/ai/index.html", ap.replace("</main>", `<p>Full markdown reference: <a href="/llms-full.txt">/llms-full.txt</a></p></main>`));
+}
 console.log("built", courses.length);
