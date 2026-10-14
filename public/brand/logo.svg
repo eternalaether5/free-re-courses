@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024" role="img" aria-label="Low Level Library logo">
+  <title>Low Level Library</title>
+  <rect width="1024" height="1024" fill="#f7f1e3"/>
+  <!-- three monospace-style "L" glyphs, like book spines on a shelf; the third is the rust accent -->
+  <g fill="#2a2118">
+    <rect x="222" y="330" width="70" height="360" rx="8"/><rect x="222" y="622" width="130" height="68" rx="8"/>
+    <rect x="402" y="330" width="70" height="360" rx="8"/><rect x="402" y="622" width="130" height="68" rx="8"/>
+  </g>
+  <g fill="#8a3b12">
+    <rect x="582" y="330" width="70" height="360" rx="8"/><rect x="582" y="622" width="130" height="68" rx="8"/>
+  </g>
+  <!-- terminal block cursor at end of the line -->
+  <rect x="742" y="572" width="60" height="118" rx="6" fill="#8a3b12" opacity=".55"/>
+  <!-- shelf -->
+  <rect x="222" y="726" width="580" height="18" rx="9" fill="#2a2118"/>
+</svg>

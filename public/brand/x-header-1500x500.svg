@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 500" width="1500" height="500" role="img" aria-label="Low Level Library header">
+  <rect width="1500" height="500" fill="#f7f1e3"/>
+  <!-- faint hex row (monospace accent) -->
+  <text x="1440" y="70" text-anchor="end" font-family="DejaVu Sans Mono, Liberation Mono, monospace" font-size="22" fill="#8a3b12" opacity=".55" letter-spacing="2">4C 4F 57 20 4C 45 56 45 4C 20 4C 49 42 52 41 52 59</text>
+  <!-- wordmark + tagline, right-center (clear of bottom-left avatar zone) -->
+  <text x="1440" y="230" text-anchor="end" font-family="DejaVu Sans, Liberation Sans, sans-serif" font-weight="700" font-size="76" fill="#2a2118" letter-spacing="-1">Low Level Library</text>
+  <text x="1440" y="292" text-anchor="end" font-family="DejaVu Serif, Liberation Serif, Georgia, serif" font-style="italic" font-size="34" fill="#5f5143">Free courses in coding, reverse engineering &amp; low-level programming</text>
+  <text x="1440" y="372" text-anchor="end" font-family="DejaVu Sans Mono, Liberation Mono, monospace" font-size="30" fill="#8a3b12">$ ./learn --from=assembly --to=everything<tspan fill="#8a3b12" opacity=".6">█</tspan></text>
+  <!-- shelf with spines, top-left (outside avatar area) -->
+  <g transform="translate(70,70)">
+    <rect x="0" y="0" width="22" height="120" rx="3" fill="#2a2118"/><rect x="30" y="20" width="22" height="100" rx="3" fill="#2a2118"/>
+    <rect x="60" y="0" width="22" height="120" rx="3" fill="#8a3b12"/><rect x="90" y="30" width="22" height="90" rx="3" fill="#2a2118"/>
+    <rect x="-10" y="126" width="140" height="8" rx="4" fill="#2a2118"/>
+  </g>
+  <rect x="0" y="482" width="1500" height="18" fill="#8a3b12"/>
+</svg>
