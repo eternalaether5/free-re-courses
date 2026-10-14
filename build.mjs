@@ -4,7 +4,7 @@ const SITE = process.env.SITE_URL || "https://lowlevellibrary.com";
 const BRAND = "Low Level Library";
 const NAME = "Free Reverse Engineering & Low-Level Programming Courses";
 const out = "dist"; fs.rmSync(out,{recursive:true,force:true}); fs.mkdirSync(out+"/courses",{recursive:true});
-const e = s => String(s).replace(/[&<>"]/g, ch => ({"&":"&","<":"<",">":">",'"':"""}[ch]));
+const e = s => String(s).replace(/[&<>"]/g, ch => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[ch]));
 const today = process.env.VERIFIED_DATE || "2026-10-13"; // date links were last verified
 const tags = [...new Set(courses.flatMap(c=>c.tags))].sort();
 const css = `:root{--bg:#f7f1e3;--paper:#fffdf7;--ink:#2a2118;--muted:#5f5143;--rule:#e2d6bf;--accent:#8a3b12;--accent-2:#a8501f;--accent-ink:#fff;--tag:#efe4cf;--shadow:0 1px 2px rgba(42,33,24,.06),0 6px 18px rgba(42,33,24,.07);--mono:ui-monospace,"SFMono-Regular","JetBrains Mono",Menlo,Consolas,monospace;--serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;--sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;--measure:46rem;--r:10px;color-scheme:light}
@@ -82,7 +82,7 @@ fs.writeFileSync(out+"/sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>\n<u
   fs.writeFileSync(out+"/beginner-languages/index.html", page(`Best Programming Languages for Absolute Beginners: Top 10 | ${BRAND}`, body, "The Low Level Librarian ranks 10 programming languages for absolute beginners, informed by the Stack Overflow 2025 survey, TIOBE and GitHub Octoverse, with a free official resource for each.", head, "/beginner-languages/", [["Beginner shelf","/beginner-languages/"]])); }
 await import("./about.mjs").then(m => { fs.mkdirSync(out+"/about",{recursive:true}); fs.writeFileSync(out+"/about/index.html", m.about({page,courses,tags,today,SITE,BRAND,e})); });
 // --- llms-full.txt: generated from courses.mjs + built Beginner Shelf and About pages (never drifts) ---
-{ const txt = h => h.replace(/<(script|style)[^>]*>[\s\S]*?<\/\1>/g,"").replace(/<br\s*\/?>/g,"\n").replace(/<\/(p|li|h[1-6]|dd|dt)>/g,"\n").replace(/<[^>]+>/g,"").replace(/&/g,"&").replace(/</g,"<").replace(/>/g,">").replace(/"/g,'"').replace(/&#x27;|&#39;/g,"'").replace(/[ \t]+/g," ").replace(/\n\s*\n+/g,"\n").trim();
+{ const txt = h => h.replace(/<(script|style)[^>]*>[\s\S]*?<\/\1>/g,"").replace(/<br\s*\/?>/g,"\n").replace(/<\/(p|li|h[1-6]|dd|dt)>/g,"\n").replace(/<[^>]+>/g,"").replace(/&amp;/g,"&").replace(/&lt;/g,"<").replace(/&gt;/g,">").replace(/&quot;/g,'"').replace(/&#x27;|&#39;/g,"'").replace(/[ \t]+/g," ").replace(/\n\s*\n+/g,"\n").trim();
   const mainOf = p => fs.readFileSync(p,"utf8").split("<main>")[1].split("</main>")[0];
   const bhtml = mainOf(out+"/beginner-languages/index.html");
   const books = [...bhtml.matchAll(/<li class="book">([\s\S]*?)<\/li>/g)].map(m => { const b=m[1]; const link=b.match(/<a href="([^"]+)">([^<]+)<\/a>/); return `### ${txt(b.match(/<h2>([\s\S]*?)<\/h2>/)[1])}\n${txt(b.match(/<\/h2><p>([\s\S]*?)<\/p>/)[1])}\n- ${txt(b.match(/<p class="stats">([\s\S]*?)<\/p>/)[1])}\n- Free first checkout: [${txt(link[2])}](${link[1]})`; });
