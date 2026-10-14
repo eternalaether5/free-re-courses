@@ -90,4 +90,8 @@ await import("./about.mjs").then(m => { fs.mkdirSync(out+"/about",{recursive:tru
   const sm = fs.readFileSync(out+"/sitemap.xml","utf8"); fs.writeFileSync(out+"/sitemap.xml", sm.replace("</urlset>", `<url><loc>${SITE}/llms-full.txt</loc><lastmod>${today}</lastmod></url></urlset>`));
   const ap = fs.readFileSync(out+"/ai/index.html","utf8"); fs.writeFileSync(out+"/ai/index.html", ap.replace("</main>", `<p>Full markdown reference: <a href="/llms-full.txt">/llms-full.txt</a></p></main>`));
 }
+fs.mkdirSync(out+"/brand",{recursive:true});
+for (const f of fs.readdirSync("public/brand")) { // PNGs are stored base64 (*.png.b64) because the repo is written via a text-only API
+  if (f.endsWith(".b64")) fs.writeFileSync(`${out}/brand/${f.slice(0,-4)}`, Buffer.from(fs.readFileSync(`public/brand/${f}`,"utf8"),"base64"));
+  else if (!f.endsWith(".png")) fs.copyFileSync(`public/brand/${f}`, `${out}/brand/${f}`); }
 console.log("built", courses.length);
