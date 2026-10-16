@@ -1,4 +1,4 @@
-// Curated v1 data. Every URL was checked live (HTTP 200) on 2026-10-13.
+// Curated v1 data. URLs checked live (HTTP 200); last batch 2026-10-16.
 // Only metadata (title, provider, link, tags) is reproduced here; course content stays on the provider's site.
 const LINK = "Free to access. Copyright held by the provider; this directory only links to it and reproduces no course content.";
 const OCW = "MIT OpenCourseWare, CC BY-NC-SA 4.0 (see ocw.mit.edu/terms).";
@@ -65,4 +65,7 @@ c("exercism","Exercism","Exercism","https://exercism.org/",["coding","c","rust",
 c("hacker101","Hacker101","HackerOne","https://www.hacker101.com/",["security","web"],"Beginner","Video lessons + CTF",LINK,"Official site"),
 c("portswigger","Web Security Academy","PortSwigger","https://portswigger.net/web-security",["security","web"],"Beginner to Advanced","Interactive labs",LINK,"Official site"),
 c("ossu-cs","OSSU Computer Science curriculum","Open Source Society University","https://github.com/ossu/computer-science",["coding","fundamentals","curriculum"],"Beginner","Curated curriculum of free courses","MIT (GitHub repository license).","GitHub repository"),
+c("diveintosystems","Dive into Systems","Suzanne J. Matthews, Tia Newhall, Kevin C. Webb","https://diveintosystems.org/",["systems","c","assembly","low-level"],"Beginner","Free online textbook",LINK,"Official book site"),
+c("linux-insides","Linux Insides","0xAX","https://github.com/0xAX/linux-insides",["os-internals","linux","low-level"],"Advanced","Free online book (GitHub)","CC BY-NC-SA 4.0 (per repository).","GitHub repository"),
+c("stanford-cs110","CS110: Principles of Computer Systems","Stanford University","https://web.stanford.edu/class/cs110/",["systems","c","os-internals"],"Intermediate","Lecture notes + assignments",LINK,"Official course page"),
 ];
