@@ -1,4 +1,4 @@
-// Curated v1 data. URLs checked live (HTTP 200); last batch 2026-10-16.
+// Curated v1 data. URLs checked live (HTTP 200); last batch 2026-10-17.
 // Only metadata (title, provider, link, tags) is reproduced here; course content stays on the provider's site.
 const LINK = "Free to access. Copyright held by the provider; this directory only links to it and reproduces no course content.";
 const OCW = "MIT OpenCourseWare, CC BY-NC-SA 4.0 (see ocw.mit.edu/terms).";
@@ -68,4 +68,5 @@ c("ossu-cs","OSSU Computer Science curriculum","Open Source Society University",
 c("diveintosystems","Dive into Systems","Suzanne J. Matthews, Tia Newhall, Kevin C. Webb","https://diveintosystems.org/",["systems","c","assembly","low-level"],"Beginner","Free online textbook",LINK,"Official book site"),
 c("linux-insides","Linux Insides","0xAX","https://github.com/0xAX/linux-insides",["os-internals","linux","low-level"],"Advanced","Free online book (GitHub)","CC BY-NC-SA 4.0 (per repository).","GitHub repository"),
 c("stanford-cs110","CS110: Principles of Computer Systems","Stanford University","https://web.stanford.edu/class/cs110/",["systems","c","os-internals"],"Intermediate","Lecture notes + assignments",LINK,"Official course page"),
+c("beej-c","Beej's Guide to C Programming","Brian \"Beej Jorgensen\" Hall","https://beej.us/guide/bgc/",["coding","c","low-level"],"Beginner","Free online book (HTML + PDF)",LINK,"Official guide page"),
 ];
