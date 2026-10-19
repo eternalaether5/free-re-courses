@@ -70,4 +70,5 @@ c("linux-insides","Linux Insides","0xAX","https://github.com/0xAX/linux-insides"
 c("stanford-cs110","CS110: Principles of Computer Systems","Stanford University","https://web.stanford.edu/class/cs110/",["systems","c","os-internals"],"Intermediate","Lecture notes + assignments",LINK,"Official course page"),
 c("beej-c","Beej's Guide to C Programming","Brian \"Beej Jorgensen\" Hall","https://beej.us/guide/bgc/",["coding","c","low-level"],"Beginner","Free online book (HTML + PDF)",LINK,"Official guide page"),
 c("crafting-interpreters","Crafting Interpreters","Robert Nystrom","https://craftinginterpreters.com/",["compilers","c","coding"],"Intermediate","Free online book (web edition)",LINK,"Official book site"),
+c("lkmpg","The Linux Kernel Module Programming Guide","Salzman, Burian, Pomerantz, Mottram, Huang (sysprog21)","https://sysprog21.github.io/lkmpg/",["os-internals","linux","c","low-level"],"Intermediate","Free online book (HTML + PDF)",LINK,"Official guide page"),
 ];
