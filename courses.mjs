@@ -73,4 +73,5 @@ c("crafting-interpreters","Crafting Interpreters","Robert Nystrom","https://craf
 c("lkmpg","The Linux Kernel Module Programming Guide","Salzman, Burian, Pomerantz, Mottram, Huang (sysprog21)","https://sysprog21.github.io/lkmpg/",["os-internals","linux","c","low-level"],"Intermediate","Free online book (HTML + PDF)",LINK,"Official guide page"),
 c("lfs","Linux From Scratch","Linux From Scratch project","https://www.linuxfromscratch.org/lfs/",["os-internals","linux","toolchain","low-level"],"Intermediate","Free online book (HTML + downloadable)",LINK,"Official project page"),
 c("modern-c","Modern C","Jens Gustedt","https://gustedt.gitlabpages.inria.fr/modern-c/",["coding","c","low-level"],"Intermediate","Free book (PDF, C23 edition)",LINK,"Official book page"),
+c("littleosbook","The Little Book About OS Development","Erik Helin and Adam Renberg","https://littleosbook.github.io/",["os-internals","x86","c","low-level"],"Intermediate","Free online book (HTML + PDF)",LINK,"Official book site"),
 ];
