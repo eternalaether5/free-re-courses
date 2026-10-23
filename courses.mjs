@@ -74,4 +74,5 @@ c("lkmpg","The Linux Kernel Module Programming Guide","Salzman, Burian, Pomerant
 c("lfs","Linux From Scratch","Linux From Scratch project","https://www.linuxfromscratch.org/lfs/",["os-internals","linux","toolchain","low-level"],"Intermediate","Free online book (HTML + downloadable)",LINK,"Official project page"),
 c("modern-c","Modern C","Jens Gustedt","https://gustedt.gitlabpages.inria.fr/modern-c/",["coding","c","low-level"],"Intermediate","Free book (PDF, C23 edition)",LINK,"Official book page"),
 c("littleosbook","The Little Book About OS Development","Erik Helin and Adam Renberg","https://littleosbook.github.io/",["os-internals","x86","c","low-level"],"Intermediate","Free online book (HTML + PDF)",LINK,"Official book site"),
+c("ldd3","Linux Device Drivers, Third Edition","Jonathan Corbet, Alessandro Rubini, Greg Kroah-Hartman (LWN.net)","https://lwn.net/Kernel/LDD3/",["os-internals","linux","c","drivers"],"Advanced","Free book (PDF chapters)","CC BY-SA 2.0 (per the book site).","Official book page (LWN.net)"),
 ];
