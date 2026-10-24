@@ -1,1 +1,1 @@
-{"name":"free-re-courses","private":true,"type":"module","scripts":{"build":"node build.mjs"}}
+{"name":"free-re-courses","private":true,"type":"module","scripts":{"build":"node build.mjs"},"dependencies":{"@vercel/blob":"2.8.2","@vercel/functions":"3.10.3"}}
