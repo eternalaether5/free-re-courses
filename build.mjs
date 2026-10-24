@@ -5,7 +5,7 @@ const BRAND = "Low Level Library";
 const NAME = "Free Reverse Engineering & Low-Level Programming Courses";
 const out = "dist"; fs.rmSync(out,{recursive:true,force:true}); fs.mkdirSync(out+"/courses",{recursive:true});
 const e = s => String(s).replace(/[&<>"]/g, ch => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[ch]));
-const today = process.env.VERIFIED_DATE || "2026-10-21"; // date links were last verified
+const today = process.env.VERIFIED_DATE || "2026-10-24"; // date links were last verified
 const tags = [...new Set(courses.flatMap(c=>c.tags))].sort();
 const css = `:root{--bg:#f7f1e3;--paper:#fffdf7;--ink:#2a2118;--muted:#5f5143;--rule:#e2d6bf;--accent:#8a3b12;--accent-2:#a8501f;--accent-ink:#fff;--tag:#efe4cf;--shadow:0 1px 2px rgba(42,33,24,.06),0 6px 18px rgba(42,33,24,.07);--mono:ui-monospace,"SFMono-Regular","JetBrains Mono",Menlo,Consolas,monospace;--serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;--sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;--measure:46rem;--r:10px;color-scheme:light}
 @media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#15120e;--paper:#1f1a15;--ink:#ede4d3;--muted:#b3a58f;--rule:#382f26;--accent:#ee9d5a;--accent-2:#f5b77f;--accent-ink:#1a1209;--tag:#2c241c;--shadow:0 1px 2px rgba(0,0,0,.4),0 8px 22px rgba(0,0,0,.35);color-scheme:dark}}
