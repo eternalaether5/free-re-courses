@@ -81,4 +81,5 @@ c("pgu","Programming from the Ground Up","Jonathan Bartlett","https://download-m
 c("linux-kernel-labs","Linux Kernel Teaching (Operating Systems 2 lectures + labs)","University POLITEHNICA of Bucharest (Linux Kernel Teaching project)","https://linux-kernel-labs.github.io/refs/heads/master/",["os-internals","linux","c","drivers"],"Advanced","Online lectures + hands-on labs",LINK,"Official docs site"),
 c("cpu-land","Putting the \"You\" in CPU","Lexi Mattick (with Hack Club)","https://cpu.land/",["systems","os-internals","linux","fundamentals"],"Beginner","Free online explainer (multi-chapter)",LINK,"Official site"),
 c("uva-x86-guide","Guide to x86 Assembly (CS216)","University of Virginia Computer Science (David Evans)","https://www.cs.virginia.edu/~evans/cs216/guides/x86.html",["assembly","x86","fundamentals","low-level"],"Beginner","Free online guide (single page)",LINK,"Official course page"),
+c("linkers-loaders","Linkers and Loaders (manuscript chapters)","John R. Levine","https://www.iecc.com/linker/",["low-level","toolchain","compilers","systems"],"Advanced","Free online book chapters (author's manuscript)",LINK,"Author's site"),
 ];
