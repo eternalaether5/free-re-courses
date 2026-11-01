@@ -83,4 +83,5 @@ c("cpu-land","Putting the \"You\" in CPU","Lexi Mattick (with Hack Club)","https
 c("uva-x86-guide","Guide to x86 Assembly (CS216)","University of Virginia Computer Science (David Evans)","https://www.cs.virginia.edu/~evans/cs216/guides/x86.html",["assembly","x86","fundamentals","low-level"],"Beginner","Free online guide (single page)",LINK,"Official course page"),
 c("linkers-loaders","Linkers and Loaders (manuscript chapters)","John R. Levine","https://www.iecc.com/linker/",["low-level","toolchain","compilers","systems"],"Advanced","Free online book chapters (author's manuscript)",LINK,"Author's site"),
 c("os01","Operating Systems: From 0 to 1","Tu Do (tuhdo)","https://github.com/tuhdo/os01",["os-internals","x86","assembly","c","low-level"],"Intermediate","Free book (PDF, GitHub)",LINK,"GitHub repository"),
+c("harvard-cs61","CS 61: Systems Programming and Machine Organization","Harvard University (SEAS, Eddie Kohler)","https://cs61.seas.harvard.edu/site/2026/",["systems","c","assembly","os-internals","low-level"],"Intermediate","Public course site: lecture notes, exercises + problem sets",LINK,"Official course page"),
 ];
