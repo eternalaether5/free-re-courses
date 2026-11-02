@@ -84,4 +84,5 @@ c("uva-x86-guide","Guide to x86 Assembly (CS216)","University of Virginia Comput
 c("linkers-loaders","Linkers and Loaders (manuscript chapters)","John R. Levine","https://www.iecc.com/linker/",["low-level","toolchain","compilers","systems"],"Advanced","Free online book chapters (author's manuscript)",LINK,"Author's site"),
 c("os01","Operating Systems: From 0 to 1","Tu Do (tuhdo)","https://github.com/tuhdo/os01",["os-internals","x86","assembly","c","low-level"],"Intermediate","Free book (PDF, GitHub)",LINK,"GitHub repository"),
 c("harvard-cs61","CS 61: Systems Programming and Machine Organization","Harvard University (SEAS, Eddie Kohler)","https://cs61.seas.harvard.edu/site/2026/",["systems","c","assembly","os-internals","low-level"],"Intermediate","Public course site: lecture notes, exercises + problem sets",LINK,"Official course page"),
+c("think-os","Think OS: A Brief Introduction to Operating Systems","Allen B. Downey (Green Tea Press, Olin College)","https://greenteapress.com/wp/think-os/",["os-internals","c","systems","fundamentals"],"Beginner","Free book (PDF + HTML)","CC BY-NC 3.0 (per the Green Tea Press book page).","Author's site"),
 ];
